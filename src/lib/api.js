@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = 'https://ghibliapi.herokuapp.com/'
+const baseUrl = 'https://ghibliapi.herokuapp.com'
 
 export function getAllFilms() {
   return axios.get(`${baseUrl}/films`)
@@ -13,7 +13,9 @@ export function getAllPeople() {
   return axios.get(`${baseUrl}/people`)
 }
 
-export function getSinglePerson() {
+export function getSinglePerson(peopleId) {
   return axios.get(`${baseUrl}/people/${peopleId}`)
 }
 
+
+// export function get FilmPeople()

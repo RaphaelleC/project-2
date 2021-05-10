@@ -1,0 +1,36 @@
+import React from 'react'
+import FilmCard from './FilmCard'
+import { getAllFilms } from '../lib/api'
+// import Error from '../common/Error'
+
+
+function FilmIndex() {
+  const [films, setFilm] = React.useState(null)
+
+  React.useEffect(() => {
+    const getData = async () => {
+      const res = await getAllFilms()
+      setFilm(res.data)
+    }
+    getData()
+  }, [])
+
+  return (
+    <section className="section film-index-background">
+      <div className="container">
+        <div className="columns is-multiline">
+          {films ? (
+            films.map(film => 
+              <FilmCard  key={film.id} {...film} />)
+          ) : (
+            <p>...loading</p>
+          )}
+          
+        </div>
+      </div>
+    </section>
+  )
+}
+
+
+export default FilmIndex

@@ -1,15 +1,14 @@
-@baseUrl = https://ghibliapi.herokuapp.com/films
-
-
+@baseUrl = https://ghibliapi.herokuapp.com
 
 
 GET {{baseUrl}}/films
 
+@peopleId = fe93adf2-2f3a-4ec4-9f68-5422f1b87c01
 
 @filmId = 2baf70d1-42bb-4437-b551-e5fed5a87abe
 
 GET {{baseUrl}}/films/{{filmId}}
 
-@
+
 
 

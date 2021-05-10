@@ -1,11 +1,26 @@
-import { Browser as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import Home from './common/Home'
-import Nav from'./common/Nav'
+import Nav from './common/Nav'
+import FilmIndex from './components/FilmIndex'
+import ShowFilm from './components/ShowFilm'
+import PeopleIndex from './components/PeopleIndex'
+import ShowPeople from './components/ShowPeople'
 
 
 function App() {
-  return <h1>Hello World</h1>
+  return (
+    <BrowserRouter>
+      <Nav />
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route path="/people/:peopleId" component={ShowPeople}/>
+        <Route path="/peopleindex" component={PeopleIndex}/>
+        <Route path="/films/:filmId" component={ShowFilm}/>
+        <Route path="/filmindex" component={FilmIndex}/>
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
 export default App
