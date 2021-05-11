@@ -18,7 +18,7 @@ function FilmIndex() {
   return (
     <section className="section film-index-background">
       <div className="container">
-        <h1 className=" title is-1 ">Film Index</h1>
+        <h1 className=" title is-1 has-text-centered ">Film Index</h1>
         <div className="columns is-multiline">
           {films ? (
             films.map(film =>

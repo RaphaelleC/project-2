@@ -49,16 +49,16 @@ function ShowFilm() {
                 {film.title === 'Pom Poko' && <img src="https://i.imgur.com/grYtoWy.png" alt="Pom Poko" />}
                 {film.title === 'Whisper of the Heart' && <img src="https://i.imgur.com/YrPD4wa.jpg" alt="Whisper of the Heart" />}
                 {film.title === 'Princess Mononoke' && <img src="https://i.imgur.com/r2h0Jyq.jpg" alt="Princess Mononoke" />}
-                {film.title === 'My Neighbors the Yamadas' && <img src="" alt="My Neighbors the Yamadas" />}
+                {film.title === 'My Neighbors the Yamadas' && <img src="https://i.imgur.com/hXhLyZh.jpg" alt="My Neighbors the Yamadas" />}
                 {film.title === 'Spirited Away' && <img src="https://i.imgur.com/hM1d3nA.png" alt="Spirited Away" />}
                 {film.title === 'The Cat Returns' && <img src="https://i.imgur.com/Zo9e8fX.jpg" alt="The Cat Returns" />}
                 {film.title === 'Howl\'s Moving Castle' && <img src="https://i.imgur.com/TmGjfsW.jpg" alt="Howl`s Moving Castle" />}
                 {film.title === 'Tales from Earthsea' && <img src="https://i.imgur.com/4coghGk.jpg" alt="Tales from Earthsea" />}
                 {film.title === 'Ponyo' && <img src="https://i.imgur.com/h5McjoZ.jpg" alt="Ponyo" />}
-                {film.title === 'Arietty' && <img src="https://i.imgur.com/j5Z5Yco.png" alt="Arietty" />}
-                {film.title === 'From up on Poppy Hill' && <img src="https://i.imgur.com/aGDT8CN.png" alt="From up on Poppy Hill" />}
+                {film.title === 'Arrietty' && <img src="https://i.imgur.com/j5Z5Yco.png" alt="Arrietty" />}
+                {film.title === 'From Up on Poppy Hill' && <img src="https://i.imgur.com/aGDT8CN.png" alt="From Up on Poppy Hill" />}
                 {film.title === 'The Wind Rises' && <img src="https://i.imgur.com/zCnoxr1.png" alt="The Wind Rises" />}
-                {film.title === 'The Tale of the Princess' && <img src="https://i.imgur.com/NpiJsgk.png" alt="The Tale of the Princess" />}
+                {film.title === 'The Tale of the Princess Kaguya' && <img src="https://i.imgur.com/NpiJsgk.png" alt="The Tale of the Princess Kaguya" />}
                 {film.title === 'When Marnie Was There' && <img src="https://i.imgur.com/YeaC2N4.jpg" alt="When Marnie Was There" />}
                 {film.title === 'The Red Turtle' && <img src="https://i.imgur.com/3QtdoSH.png" alt="The Red Turtle" />}
               </figure>

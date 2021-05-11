@@ -68,8 +68,8 @@ function ShowPeople() {
                 {people.name === 'Cat King' && <img src="https://i.imgur.com/6XXh7WS.jpg" alt="Cat King" />}
                 {people.name === 'Yuki' && <img src="https://i.imgur.com/YQKsPuE.png" alt="Yuki" />}
                 {people.name === 'Haru' && <img src="https://i.imgur.com/BIAip6S.jpg" alt="Haru" />}
-                {people.name === 'Baron Humbert von Gikkingen' && <img src="" alt="Baron Humbert von Gikkingen" />}
-                {people.name === 'Natori' && <img src="https://i.imgur.com/Xuz750T.jpg" alt="Natori" />}
+                {people.name === 'Baron Humbert von Gikkingen' && <img src="https://i.imgur.com/Xuz750T.jpg" alt="Baron Humbert von Gikkingen" />}
+                {people.name === 'Natori' && <img src="https://i.imgur.com/rlk5J9j.jpg" alt="Natori" />}
                 {people.name === 'Colonel Muska' && <img src="https://i.imgur.com/OMi0UpQ.jpg" alt="Colonel Muska" />}
                 {people.name === 'Porco Rosso' && <img src="https://i.imgur.com/7I4GsRC.jpg" alt="Porco Rosso" />}
                 {people.name === 'Sosuke' && <img src="https://i.imgur.com/3pJCOSD.jpg" alt="Sosuke" />}
