@@ -23,11 +23,11 @@ function ShowPeople() {
       <div className="container">
         {people ? (
           <div key={people.id}>
-            <h2 className="title has-text-centered">{people.name}</h2>
+            <h1 className="title is-size-1 has-text-centered is-bold">{people.name}</h1>
             <div className="columns">
-              <div className="column is-half">
-                <h4>Eye color : {people.eye_color}</h4>
-                <h4>Hair color : {people.hair_color}</h4>
+              <div className="column is-half has-text-centered">
+                <h2 className="is-size-3">Eye color : {people.eye_color}</h2>
+                <h2 className="is-size-3">Hair color : {people.hair_color}</h2>
               </div>
               <div className="column is-half">
                 {people.name === 'Pazu' && <img src="https://i.imgur.com/EquTNn1.png" alt="Pazu" />}

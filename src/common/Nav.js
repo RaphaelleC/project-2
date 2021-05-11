@@ -31,7 +31,7 @@ function Nav() {
               Films
             </Link>
             <Link to="/peopleindex" className="navbar-item">
-              People
+              Characters
             </Link>
             <Link to="/search" className="navbar-item">
               Search

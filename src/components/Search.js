@@ -44,21 +44,22 @@ function Search () {
   })
 
   return (
-    <>
+    <section className="section search-background">
       <div className="container">
         <input
+          className="input is-medium is-success"
           placeholder="Find any Ghibli film or character..."
           onChange={handleInput}
           value={searchTerm}
         />
-        <button type="button" onClick={handleClear}>Clear</button>
+        <button className="button" type="button" onClick={handleClear}>Clear</button>
       </div>
       <div className="container">
         <div className="people">
-          {filteredPeople ? (
-            filteredPeople.map(peep => (
-              <div key={peep.name} className="columns is-multiline">
-                <div className="column is-one-quarter-desktop is-one-third-tablet">
+          <div className="columns is-multiline">
+            {filteredPeople ? (
+              filteredPeople.map(peep => (
+                <div key={peep.name} className="column is-one-quarter-desktop is-one-third-tablet">
                   <Link to={`/people/${peep.id}`}>
                     <div className="card-header">
                       <div className="card has-text-centered">
@@ -70,15 +71,13 @@ function Search () {
                     </div>
                   </Link>
                 </div>
-              </div>
-            ))
-          ) : (
-            <p>...loading</p>
-          )}
-          {filteredFilms ? (
-            filteredFilms.map(film => (
-              <div key={film.title} className="columns is-multiline">
-                <div className="column is-one-quarter-desktop is-one-third-tablet">
+              ))
+            ) : (
+              <p>...loading</p>
+            )}
+            {filteredFilms ? (
+              filteredFilms.map(film => (
+                <div key={film.title} className="column is-one-quarter-desktop is-one-third-tablet">
                   <Link to={`/people/${film.id}`}>
                     <div className="card-header">
                       <div className="card has-text-centered">
@@ -90,14 +89,14 @@ function Search () {
                     </div>
                   </Link>
                 </div>
-              </div>
-            ))
-          ) : (
-            <p>...loading</p>
-          )}
+              ))
+            ) : (
+              <p>...loading</p>
+            )}
+          </div>
         </div>
       </div>
-    </>
+    </section>
   )
 }
 export default Search

@@ -37,8 +37,14 @@ section.section {
 
 .people-index-background {
   background-image: url("https://i.imgur.com/ZVn1CzZ.jpg");
-  background-size: contain;
-  // background-attachment: fixed;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.search-background {
+  background-image: url('https://i.imgur.com/yu51UXt.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 $blanc: rgb(255, 255, 255);
