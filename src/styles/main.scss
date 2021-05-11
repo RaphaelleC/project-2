@@ -30,18 +30,20 @@ section.section {
 }
 
 .film-index-background {
-  background-image: url('https://i0.wp.com/obsessedwithjapan.com/wp-content/uploads/2020/04/Princess-Mononoke.jpg?fit=2100%2C1500&ssl=1');
+  background-image: url('https://i.imgur.com/94WJsxX.jpg');
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .people-index-background {
   background-image: url("https://i.imgur.com/ZVn1CzZ.jpg");
   background-size: contain;
+  // background-attachment: fixed;
 }
 
 $blanc: rgb(255, 255, 255);
 $rouge: rgb(215, 60, 33);
-$card-header-background-color: $rouge;
+$card-background-color: $rouge;
 $box-padding: 1rem;
 $card-header-color: $blanc;
 

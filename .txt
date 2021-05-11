@@ -1,0 +1,56 @@
+import React from 'react'
+import axios from 'axios'
+function App() {
+  const [peep, setPeep] = React.useState(null)
+  const [film, setFilm] = React.useState('All')
+  const [searchTerm, setSearchTerm] = React.useState('')
+  React.useEffect(() => {
+    const getData = async () => {
+      const res = await axios.get('https://ghibliapi.herokuapp.com/people')
+      setPeep(res.data)
+    }
+    getData()
+  }, [])
+  const handleSelect = (e) => {
+    setSelectedFilm(e.target.value)
+  }
+  const handleInput = (e) => {
+    setSearchTerm(e.target.value)
+  }
+  const handleClear = () => {
+    setSelectedRegion('All')
+    setSearchTerm('')
+  }
+  const filteredPeep = countries?.filter((peep) => {
+    return (
+      (peep.film === selectedFilm || selectedFilm === 'people') &&
+      peep.name.toLowerCase().includes(searchTerm)
+    )
+  })
+  return (
+    <>
+      <div className="container">
+        <input
+          placeholder="Search..."
+          onChange={handleInput}
+          value={searchTerm}
+        />
+        <button type="button" onClick={handleClear}>Clear</button>
+      </div>
+      <div className="container">
+        <div className="people">
+          {filteredPeople ? (
+            filteredPeople.map(peep => (
+              <div key={peep.name}>
+                <PeopleCard />
+              </div>
+            ))
+          ) : (
+            <p>...loading</p>
+          )}
+        </div>
+      </div>
+    </>
+  )
+}
+export default App

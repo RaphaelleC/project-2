@@ -6,7 +6,7 @@ function PeopleCard({ id, name }) {
       <Link to={`/people/${id}`}>
         <div className="card-header">
           <div className="card has-text-centered">
-            <div className="card-content">
+            <div className="card-content has-background-white">
               <h3 className="subtitle">{name}</h3>
               <img src="https://i.imgur.com/67t3JXn.jpg" alt="Ghibli characters"/>
             </div>

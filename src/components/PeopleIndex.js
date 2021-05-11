@@ -16,6 +16,7 @@ function PeopleIndex() {
   return (
     <section className="section people-index-background">
       <div className="container">
+        <h1 className="title is-1 has-text-centered has-text-light">People Index</h1>
         <div className="columns is-multiline">
           {people ? (
             people.map(peep =>

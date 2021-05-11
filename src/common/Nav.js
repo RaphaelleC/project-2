@@ -33,6 +33,9 @@ function Nav() {
             <Link to="/peopleindex" className="navbar-item">
               People
             </Link>
+            <Link to="/search" className="navbar-item">
+              Search
+            </Link>
             <div className="navbar-end">
             </div>  
           </div>
