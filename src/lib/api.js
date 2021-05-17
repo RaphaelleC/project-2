@@ -16,6 +16,3 @@ export function getAllPeople() {
 export function getSinglePerson(peopleId) {
   return axios.get(`${baseUrl}/people/${peopleId}`)
 }
-
-
-// export function get FilmPeople()

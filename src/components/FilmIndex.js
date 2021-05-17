@@ -1,7 +1,6 @@
 import React from 'react'
 import FilmCard from './FilmCard'
 import { getAllFilms } from '../lib/api'
-// import Error from '../common/Error'
 
 
 function FilmIndex() {
