@@ -4,7 +4,7 @@ by [Raphaëlle Charrier](https://github.com/RaphaelleC) and [Antoinette Demoncea
 
 Ghiblipedia is a website referencing movies and characters from the Ghibli Studio, using a [public API](https://ghibliapi.herokuapp.com/).
 
-![Homepage](./screenshots/Homepage.png)
+<img src="./screenshots/Homepage.png" alt="Homepage"/>
 
 ## Content
 
@@ -13,6 +13,8 @@ Ghiblipedia is a website referencing movies and characters from the Ghibli Studi
 - [Technologies](#technologies-used)
 - [Responsibilities](#responsibilities)
 - [Key Learnings](#key-learnings)
+- [Achivements](#achievements)
+- [Challenges](#challenges)
 - [Conclusions](#conclusions)
 
 ## Project Brief
@@ -27,7 +29,9 @@ Ghiblipedia is a website referencing movies and characters from the Ghibli Studi
 
 For this project, we worked together on the same directory using VSCode live share option. We divided our tasks so we didn't have to work on the same file at the same time.<br>
 
-Given that we only had 2 days to complete this project, we decided to take up to 2 hours to find an API we would both be happy with. 
+Given that we only had 2 days to complete this project, we decided to take up to 2 hours to find an API we would both be happy with.
+
+We then decided on what we wanted to build with the API : a homepage, 2 "lists" pages (one listing the characters, the other listing the movies) and a search page. After that, we divided the work between us and started working on it while being on constant communication.
 
 ## Technologies
 
@@ -44,6 +48,8 @@ Given that we only had 2 days to complete this project, we decided to take up to
 
 I have been in charge of the characters listing and showcase of our website, as well as its styling.<br>
 
+First, I had to get the data from the API in order to use it :
+
 ```javascript
 export function getAllPeople() {
   return axios.get(`${baseUrl}/people`)
@@ -54,9 +60,9 @@ export function getSinglePerson(peopleId) {
 }
 ```
 
-I used the functions above to get the data from the API and use it on our app :
+And then display the data like a catalog of characters :
 
-```javascript
+```js
 function PeopleIndex() {
   const [people, setPeople] = React.useState(null)
 
@@ -87,11 +93,35 @@ function PeopleIndex() {
 }
 ```
 
+I used the map method with the `PeopleCard` so that all the characters are displayed evenly on a card with their details (name and picture). We can click on each card to go to the character's page that contains more informations. I used this function to get a single character from the API :
+
+```js
+export function getSinglePerson(peopleId) {
+  return axios.get(`${baseUrl}/people/${peopleId}`)
+}
+```
+
+And this function to display the properties of each characters on a page :
+
+```js
+React.useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await getSinglePerson(peopleId)
+        setPeople(response.data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getData()
+  }, [peopleId])
+```
+
 ### Home and search pages
 
 Antoinette and I worked on the home page and the search page together.
 
-We handled the search bar this way, with a clear button to delete the search term :
+We handled the search bar with the filter method for each category (character or movie), with a `clear` button to delete the search term :
 ```javascript
 const handleInput = (e) => {
     setSearchTerm(e.target.value)
@@ -114,11 +144,13 @@ const handleInput = (e) => {
   })
 ```
 
+When the search bar is empty, the search page shows every character and movie the API contains, and when the users starts typing what they're looking for, the functions filters all that corresponds to the search term.
+
 ### Styling
 
-I have styled the pages I have implemented, using CSS and the Bulma library.
+I have styled the pages I have created, using custom CSS classes and the Bulma library.
 
-![Characters_index](./screenshots/Characters_index.png)
+<img src="./screenshots/Characters_index.png" alt="characters index"/>
 
 ## Key Learnings
 
@@ -126,6 +158,14 @@ This project made me more confortable using React and building a simple website,
 
 We also came to the conclusion that the choice of an API is not easy and that we could have chosen a better one. For the movies and characters, we realized that there was no image listed on this API, and it was too late to choose a different one. So we decided to go 'the hard way' and uploaded images we found on the internet to Imgur to be able to use them on our website. We didn't want our website to be just plain text.
 
+## Achievements
+
+- Building and deployment of a React app
+- Usage of a free and open source API
+
+## Challenges
+
+For me, the biggest challenge of this project was working on the same directory on pairing. Even if we separated the workload so we didn't have to work on the exact same file at the same time, when we wanted to test if what we implemented was working it was difficult to do so as we were both testing things from the same directory, so if one of us had an error it would show on the other person's screen and we had to wait for the error to be corrected before being able to properly test. Fortunately, we kept a great communication between each other so we knew when the other had an issue and when not, so we could help and be able to test our implementations without losing a lot of time.
 
 ## Conclusions
 
