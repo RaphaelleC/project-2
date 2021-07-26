@@ -19,10 +19,10 @@ Ghiblipedia is a website referencing movies and characters from the Ghibli Studi
 
 ## Project Brief
 
-* **Consume a public API** – this could be anything but it must make sense for your project.
+* **Consume a public API** – This could be anything but it must make sense for your project.
 * **Have several components** - At least one classical and one functional.
-* **The app can have a router** - with several "pages", this is up to your disgression and if it makes sense for your project.
-* **Include wireframes** - that you designed before building the app.
+* **The app can have a router** - With several "pages", this is up to your disgression and if it makes sense for your project.
+* **Include wireframes** - That you designed before building the app.
 * **Be deployed online** and accessible to the public.
 
 ## Approach
@@ -154,14 +154,14 @@ I have styled the pages I have created, using custom CSS classes and the Bulma l
 
 ## Key Learnings
 
-This project made me more confortable using React and building a simple website, as well as getting data from an API.
+This project made me more comfortable using React and building a simple website, as well as getting data from an API.
 
 We also came to the conclusion that the choice of an API is not easy and that we could have chosen a better one. For the movies and characters, we realized that there was no image listed on this API, and it was too late to choose a different one. So we decided to go 'the hard way' and uploaded images we found on the internet to Imgur to be able to use them on our website. We didn't want our website to be just plain text.
 
 ## Achievements
 
-- Building and deployment of a React app
-- Usage of a free and open source API
+- Building and deployment of a React app : a React app works differently than a HTML/CSS/JavaScript app. I have learnt how to build a simple one with this project, as React is different from JavaScript.
+- Usage of a free and open source API : it was the first time I used a database to build a website from it. In doing so, I have learnt how to fetch data from an external source, and how to render it with React (multiple pages, more functionalities).
 
 ## Challenges
 
